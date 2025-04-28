@@ -78,6 +78,9 @@ O código segue uma sequência lógica para implementar o servidor:
    Hello world!
    ```
 
+## Resultado
+![image](https://github.com/user-attachments/assets/ff6d8e89-725c-4253-a0fe-52296327fd60)
+
 ## Observações
 
 Este servidor é básico e não implementa todas as funcionalidades de um servidor HTTP completo.
