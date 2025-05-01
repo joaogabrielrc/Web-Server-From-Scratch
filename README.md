@@ -1,8 +1,8 @@
-# README - webserver.c
+# README - 01-webserver.c
 
 ## Descrição
 
-Este arquivo, `webserver.c`, implementa um servidor web simples em C. Ele utiliza sockets para estabelecer conexões TCP e responde a requisições de clientes com uma mensagem HTTP básica. O código é projetado para fins educacionais, demonstrando os conceitos fundamentais de redes e programação de sockets.
+Este arquivo, `01-webserver.c`, implementa um servidor web simples em C. Ele utiliza sockets para estabelecer conexões TCP e responde a requisições de clientes com uma mensagem HTTP básica. O código é projetado para fins educacionais, demonstrando os conceitos fundamentais de redes e programação de sockets.
 
 ---
 
@@ -55,7 +55,7 @@ O código segue uma sequência lógica para implementar o servidor:
    Use o GCC para compilar o arquivo:
 
    ```bash
-   gcc -o webserver webserver.c
+   gcc -o webserver 01-webserver.c
    ```
 
 2. **Executar o servidor**: Execute o binário gerado:
@@ -83,13 +83,18 @@ O código segue uma sequência lógica para implementar o servidor:
 
 ## Observações
 
-Este servidor é básico e não implementa todas as funcionalidades de um servidor HTTP completo.
-Ele não trata múltiplas conexões simultaneamente (não é multithreaded).
+Este servidor é básico e não implementa todas as funcionalidades de um servidor HTTP completo.  
+Ele não trata múltiplas conexões simultaneamente (não é multithreaded).  
 Para uso em produção, melhorias como suporte a HTTPS, tratamento de erros robusto e segurança devem ser implementadas.
-Requisitos
-Sistema operacional Linux.
-Compilador GCC.
-Conhecimento básico de redes e programação em C.
+
+**Motivo de funcionar apenas em Linux**:  
+O código utiliza bibliotecas e chamadas de sistema específicas do Linux, como `sys/socket.h` e `unistd.h`, que podem não ser compatíveis com outros sistemas operacionais, como Windows, sem modificações ou uso de camadas de compatibilidade.
+
+### Requisitos
+
+- Sistema operacional Linux.
+- Compilador GCC.
+- Conhecimento básico de redes e programação em C.
 
 ## Licença
 

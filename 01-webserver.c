@@ -10,10 +10,10 @@
 
 int main()
 {
-  int server_fd, client_fd;            // File descriptors: um para o servidor, outro para cada cliente
-  struct sockaddr_in address;          // Estrutura que guarda as informações de IP e porta
-  int address_len = sizeof(address);   // Tamanho da estrutura address
-  char buffer[APP_MAX_BUFFER] = {0};    // Buffer onde vamos armazenar os dados recebidos
+  int server_fd, client_fd;          // File descriptors: um para o servidor, outro para cada cliente
+  struct sockaddr_in address;        // Estrutura que guarda as informações de IP e porta
+  int address_len = sizeof(address); // Tamanho da estrutura address
+  char buffer[APP_MAX_BUFFER] = {0}; // Buffer onde vamos armazenar os dados recebidos
 
   // (1) Criação do socket TCP
   // -> Aqui a aplicação cria um socket IPv4 (AF_INET) de fluxo (SOCK_STREAM)
@@ -30,7 +30,7 @@ int main()
   address.sin_port = htons(PORT); // htons() transforma o número da porta para o padrão da rede (big-endian)
 
   // (3) Faz o bind do socket
-  // -> Aqui associamos o socket criado à porta 8080. 
+  // -> Aqui associamos o socket criado à porta 8080.
   // -> Até agora, o kernel ainda não está aceitando conexões, apenas reservamos a porta.
   if (bind(server_fd, (struct sockaddr *)&address, sizeof(address)) < 0)
   {
